@@ -1,0 +1,147 @@
+/*
+CTC Separate Stylesheet
+Updated: 2019-05-09 20:40:37
+Theme Name: Zelle Lite Child
+Theme URI: https://themeisle.com/themes/zerif-lite/
+Template: zerif-lite2
+Author: ThemeIsle
+Author URI: https://themeisle.com
+Description: Zelle LITE is a free one page WordPress theme. It's perfect for web agency business,corporate business,personal and parallax business portfolio, photography sites and freelancer.Is built on BootStrap with parallax support, is responsive, clean, modern, flat and minimal. Zelle Lite is ecommerce (WooCommerce) Compatible, WPML, RTL, Retina-Ready, SEO Friendly and with parallax, full screen image is one of the best business themes.
+Tags: one-column,two-columns,right-sidebar,full-width-template,rtl-language-support,sticky-post,theme-options,custom-background,custom-menu,editor-style,featured-images,threaded-comments,translation-ready,footer-widgets,portfolio,e-commerce,blog
+Version: 1.8.5.52.1557434437
+*/
+
+/* Dette er ændringer på menuens farver og font  */
+.navbar {
+	background: none;
+	font-family: roboto;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
+	font-size: 20px; /* primær menus font størrelse */
+	text-align: center;
+}
+.navbar-inverse .navbar-nav > li > a:focus {
+	color: #598089;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+	color: #598089;
+}
+ul.nav > li.current > a:before, .page ul.nav > li.current-menu-item > a:before, .single-post ul.nav > li.current-menu-item > a:before, .archive ul.nav > li.current-menu-item > a:before {
+	background: #598089;
+}
+.navbar-inverse .navbar-nav > li.current > a {
+	color: #598089;
+}
+
+/* Dette putter Logoet i midten af siden */
+.navbar-header {
+	position: absolute;
+	left:0;
+	right:0;
+}
+
+/* ændrer størrelsen og positionen af logoet */
+@media (min-width: 767px) {
+.navbar-brand {
+	height: 140px;
+	margin-top: 20px;
+	margin-right: -15px; /* Temaet giver logoet en margin-left: -15px dette modsiger det så logoet kommer i midten af siden  */
+}
+}
+
+/* ændrer menuen fra en menu som følger med når man scroller, til en som bliver på toppen af siden */
+@media (min-width: 767px) {
+#main-nav {
+	position: absolute; }}
+
+@media (min-width: 767px) {
+#main-nav.fixed {
+	position: absolute; }}
+
+/* Denne section ændrer den primære menu-baren fra en højrestillet menu, til en som er splittet til venstre og højre uden om  */
+.menu-align-center #site-navigation > ul {
+	text-align: left;
+}
+.menu-align-center #site-navigation > ul {
+	text-align: left;
+}
+.navbar-right {
+	float: none!important;
+}
+
+/* Primære menu-punkter skal have enten .menu_section_left eller .menu_section_right CSS classes (via wordpress) så bliver de sat enten til venstre eller højre på menu-baren */
+.menu_section_left {
+	float: left;
+	padding-left: 30px;
+}
+.menu_section_right {
+	float: right!important;
+	padding-right: 30px;
+}
+.navbar-inverse .navbar-nav > li {
+	margin-right: 0;
+}
+
+/* giver menu-punkterne rigtig højde på siden  */
+.menu-align-center #site-navigation > ul {   
+	margin-top: 60px;
+}
+
+/* bestemmer bredden af menu-barens menu punkter ved forskellige skærm størrelser  */
+@media (min-width: 1200px) {
+	#main-nav .container {
+	width: 860px;
+	}
+}
+@media (min-width: 992px) {
+	#main-nav .container {
+	width: 860px;	
+	}
+}
+
+/* fixer mobil menuen (ellers ville menuen overlappe med logoet) */
+@media (max-width: 767px) {
+	.menu-align-center #site-navigation > ul {
+	width: 50%;
+	margin: 100px auto 0 auto; 
+	}
+}
+
+/* styles til knappen som scroller tilbage til toppen af siden */
+#myBtn {
+	display: none; /* skjult til at starte med */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 15px; /* knappens position */
+	right: 15px; /* knappens position */
+	z-index: 99; /* knap lægges øverst */
+	background-color: transparent;
+	width: 90px;
+	border: none;
+	padding: 0;
+}
+/* gør knappen lidt større på tablet og desktop */
+@media (min-width: 767px) {
+	#myBtn {
+		width: 130px;
+	}
+}
+#myBtn:hover {
+	filter: drop-shadow(2px 8px 5px black) brightness(85%); /* gør knappens farve lidt mørkere og giver den en skygge når man holder musen over */
+}
+
+/* styles til den sekundere menubar når man scroller ned på siden */
+#myNavBar {
+	display: none; /* skjult til at starte med */
+}
+#myNavBarContainer .elementor-widget-wrap {
+	flex-wrap: nowrap; /* lægger menupunkterne side om side, frem for oven på hinanden */ 
+}
+
+/* giver al tekst på siden noget plads mellem bogstaverne */
+body {
+	letter-spacing: 1px;
+}
+
+
+
